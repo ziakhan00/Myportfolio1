@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    /* Existing CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://en.idei.club/uploads/posts/2023-06/thumbs/1686775362_en-idei-club-p-portfolio-background-design-dizain-krasivo-24.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: azure;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    header:hover {
+      background-color: #555;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #555;
+      transform: scale(1.1);
+    }
+
+    .text {
+      text-align: center;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Colorful gradient background */
+      border-radius: 50%;
+      transition: background 0.3s ease; /* Smooth transition for background change */
+      border: 6px solid #fff; /* White border around the circle */
+    }
+
+    .img:hover {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b, #ffd700); /* Add more colors on hover */
+    }
+
+    .img img {
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 4px solid transparent; /* Adding border */
+    }
+
+    .img:hover img {
+      transform: scale(1.1); /* Slight zoom effect */
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect on hover */
+    }
+
+    button {
+      padding: 10px 30px;
+      color: rgb(220, 197, 20);
+      border-color: #eb330a;
+      background-color: crimson;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #eb330a;
+      transform: scale(1.05);
+    }
+
+    .button button:nth-child(1):hover {
+      background-color: #28a745; /* Green hover for Download CV */
+    }
+
+    .button button:nth-child(2):hover {
+      background-color: #17a2b8; /* Teal hover for About */
+    }
+
+    .container section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .container section:hover {
+      transform: translateY(-10px);
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    ul li a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    ul li a:hover {
+      color: crimson;
+    }
+
+    .contact-form button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      transition: background-color 0.3s ease;
+    }
+
+    footer:hover {
+      background-color: #555;
+    }
+
+    footer ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    footer ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    footer ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer ul li a:hover {
+      color: crimson;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    /* New CSS for Gallery */
+    .gallery {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .gallery h2 {
+      margin-bottom: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <nav>
+    <a href="./About.html">About</a>
+    <a href="./Experience.html">Experience</a>
+    <a href="./skills.html">Skills</a>
+    <a href="./services.html">Services</a>
+    <a href="./Projects.html">Projects</a>
+    <a href="./contact.html">Contact</a>
+  </nav>
+
+  <marquee height="50%" width="100%" behavior="alternate" bgcolor="yellow" direction="">
+    <h1 style="color: #333;">"Welcome to my portfolio website!"</h1> 
+  </marquee>
+
+  <div class="text">
+    <h3>Hello, I'm</h3>
+    <h1 style="color: #e8ef20;">Zia ur Rehman</h1>
+    <div class="img">
+      <img src="./image/picofme (4).png" alt="Zia ur Rehman" style="width:200px">
+    </div>
+    <h2>Web Developer</h2>
+    <div class="button">
+      <button>Download CV</button>&nbsp;&nbsp;&nbsp;<button>About</button>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello, I'm Zia Ur Rehman, a passionate frontend web developer with expertise in HTML, CSS, Bootstrap, and JavaScript. I am dedicated to creating engaging and user-friendly web experiences through clean and efficient code.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>Sarhad University: Currently pursuing [mention your degree or program here]. Hadaf Group of Colleges: Successfully completed FSC.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>SMIT Academy: Enrolled in web development courses to enhance my skills and stay updated with industry trends.</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li>Web Development</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Here are some of my projects:</p>
+      <ul>
+        <li><a href="https://ziakhan00.github.io/quiz/">Project 1</a></li>
+        <li><a href="https://ziakhan00.github.io/netflixweb1/">Project 2</a></li>
+      </ul>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <h2>Gallery</h2>
+      <img src="./image/images.jfif" alt="Gallery Image 1">
+      <img src="./image/th (6).jpeg" alt="Gallery Image 2">
+      <img src="./image/img1.jpg" alt="Gallery Image 3">
+      <!-- Add more images as needed -->
+    </section>
+
+    <section id="contact">
+      <h2 style="text-align: center;">Contact Me</h2>
+      <form class="contact-form" style="display: flex; flex-direction: column; align-items: center; max-width: 600px; margin: 0 auto;">
+        <input type="text" name="name" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        <input type="email" name="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
+        <textarea name="message" placeholder="Your Message" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; height: 150px;"></textarea>
+        <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>Follow me on social media:</p>
+    <ul>
+      <li><a href="https://web.facebook.com/">Facebook</a></li>
+      <li><a href="https://twitter.com/">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/zia-ur-rehman/">LinkedIn</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
